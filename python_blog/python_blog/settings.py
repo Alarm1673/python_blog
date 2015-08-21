@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blogdb',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'zzl123',
         'HOST': '',
         'PORT': '',
     }
@@ -113,6 +113,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,  'static'),
 )
+
+MEDIA_URL ='/uploads/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,  'uplaods')
+
+#自定义用户model
+AUTH_USER_MODEL = 'blog.User'
 
 #网站的基本信息配置
 SITE_NAME = '优游幻世的个人博客'

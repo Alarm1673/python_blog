@@ -1,0 +1,1060 @@
+2015-08-21 09:13:39,311 [Thread-25:2912] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 09:13:39,315 [Thread-26:8052] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 13:46:42,976 [Thread-25:6740] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 13:46:42,984 [Thread-26:9068] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 13:46:44,144 [Thread-27:6256] [django.request:170] [base:get_response] [WARNING]- Not Found: /news.html
+2015-08-21 13:46:46,470 [Thread-28:3308] [django.request:170] [base:get_response] [WARNING]- Not Found: /p.html
+2015-08-21 13:46:53,262 [Thread-33:2056] [django.request:170] [base:get_response] [WARNING]- Not Found: /portal.php
+2015-08-21 15:26:48,494 [Thread-25:7768] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 15:26:48,502 [Thread-26:7828] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 18:32:40,549 [Thread-2:7164] [django.request:170] [base:get_response] [WARNING]- Not Found: /admi
+2015-08-21 18:32:40,907 [Thread-3:5840] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 18:32:40,911 [Thread-4:7804] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 19:16:56,691 [Thread-2:9204] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 19, in <module>
+    from blog.conf import settings
+ImportError: No module named conf
+2015-08-21 19:16:59,926 [Thread-3:8636] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 19, in <module>
+    from blog.conf import settings
+ImportError: No module named conf
+2015-08-21 19:17:13,119 [Thread-4:7296] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 19, in <module>
+    from blog.conf import settings
+ImportError: No module named conf
+2015-08-21 19:17:53,651 [Thread-2:6404] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:17:56,482 [Thread-3:1928] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:18:23,756 [Thread-2:3208] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:18:41,665 [Thread-3:3452] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:18:42,217 [Thread-4:7296] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 19:18:42,226 [Thread-5:5920] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-21 19:19:43,157 [Thread-2:6076] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:44,299 [Thread-3:5092] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:44,668 [Thread-4:6264] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:45,025 [Thread-5:6708] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:45,618 [Thread-6:7040] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:46,012 [Thread-7:8260] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:19:46,403 [Thread-8:8416] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:21:15,588 [Thread-2:8380] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:22:05,348 [Thread-2:8360] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:22:06,226 [Thread-3:8660] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:22:06,884 [Thread-4:6260] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:22:07,178 [Thread-5:2104] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:22:27,418 [Thread-2:9204] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "D:\Python27\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 1195, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "D:\Python27\lib\site-packages\django\contrib\admin\templatetags\admin_static.py", line 17, in static
+    return _static(path)
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\templatetags\staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "D:\Python27\lib\site-packages\django\utils\functional.py", line 226, in inner
+    self._setup()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 394, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "D:\Python27\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in __init__
+    *args, **kwargs)
+  File "D:\Python27\lib\site-packages\django\core\files\storage.py", line 186, in __init__
+    self.location = abspathu(self.base_location)
+  File "D:\Python27\lib\ntpath.py", line 488, in abspath
+    path = _getfullpathname(path)
+TypeError: coercing to Unicode: need string or buffer, tuple found
+2015-08-21 19:35:05,114 [Thread-2:2900] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/user/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 20, in <module>
+    from blog.upload import upload_image
+  File "E:\python_blog\python_blog\blog\upload.py", line 14
+SyntaxError: Non-ASCII character '\xe5' in file E:\python_blog\python_blog\blog\upload.py on line 14, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2015-08-21 19:35:18,039 [Thread-2:4044] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/user/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 20, in <module>
+    from blog.upload import upload_image
+  File "E:\python_blog\python_blog\blog\upload.py", line 14
+SyntaxError: Non-ASCII character '\xe5' in file E:\python_blog\python_blog\blog\upload.py on line 14, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
