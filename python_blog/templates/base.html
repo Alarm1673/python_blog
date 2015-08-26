@@ -24,9 +24,8 @@
   </div>
   <nav id="topnav" class="f_r">
     <ul>
-      <a href="/">首页</a>
       {% for category in category_list %}
-      <a href="{% url 'category' %}?cid={{ category.id }}">{{ category.name }}</a>
+      <a href="base.html" target="_blank">{{ category.name }}</a>
       {% endfor %}
     </ul>
     <script src="{% static 'js/nav.js' %}"></script>

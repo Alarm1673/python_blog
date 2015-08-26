@@ -1,6 +1,7 @@
 #coding:utf-8
 from django.shortcuts import render
 from django.conf import settings
+from models import *
 import  logging
 # Create your views here.
 
@@ -16,4 +17,8 @@ def global_setting(request):
             'PRO_EMAIL':settings.PRO_EMAIL}
 
 def index(request):
-    return render(request, 'index.html',locals())
+    try:
+        category_list = Category.objects.all()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'index.html',{'category_list':category_list})
