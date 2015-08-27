@@ -31,6 +31,7 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.name
 
+#分类
 class Category(models.Model):
     name = models.CharField(max_length=30, verbose_name='分类名称')
     index = models.IntegerField(verbose_name='分类的排序')

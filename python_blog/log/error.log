@@ -150,3 +150,7 @@
 2015-08-25 10:40:20,413 [Thread-30:2032] [blog.views:22] [views:index] [ERROR]- global name 'Category' is not defined
 2015-08-25 10:40:20,615 [Thread-31:3964] [blog.views:22] [views:index] [ERROR]- global name 'Category' is not defined
 2015-08-25 17:05:45,703 [Thread-2:6216] [blog.views:22] [views:index] [ERROR]- global name 'Category' is not defined
+2015-08-27 11:21:19,773 [Thread-2:4916] [blog.views:40] [views:index] [ERROR]- 'Manager' object has no attribute 'distinct_date'
+2015-08-27 11:21:21,545 [Thread-24:7584] [blog.views:40] [views:index] [ERROR]- 'Manager' object has no attribute 'distinct_date'
+2015-08-27 13:42:54,046 [Thread-47:7928] [blog.views:40] [views:index] [ERROR]- 'Manager' object has no attribute 'distinct_date'
+2015-08-27 13:43:27,226 [Thread-69:7220] [blog.views:40] [views:index] [ERROR]- 'Manager' object has no attribute 'distinct_date'
