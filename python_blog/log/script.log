@@ -7752,3 +7752,5 @@ Traceback (most recent call last):
   File "D:\Python27\lib\site-packages\django\template\base.py", line 743, in __init__
     if not isinstance(var, six.string_types):
 RuntimeError: maximum recursion depth exceeded in __instancecheck__
+2015-08-28 09:59:43,385 [Thread-24:6576] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-08-28 09:59:43,408 [Thread-25:3024] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
