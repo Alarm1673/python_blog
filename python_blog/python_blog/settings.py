@@ -58,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR , 'templates'),
+            os.path.join(BASE_DIR, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blogdb',
         'USER': 'root',
-        'PASSWORD': 'zzl123',
+        'PASSWORD': '',
         'HOST': '',
         'PORT': '',
     }
@@ -122,6 +122,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,  'uplaods')
 AUTH_USER_MODEL = 'blog.User'
 
 #网站的基本信息配置
+SITE_URL = 'http://localhost:8000/'
 SITE_NAME = '优游幻世的个人博客'
 SITE_DESC = '专注Python开发'
 WEIBO_SINA = 'http://weibo.com/u/5033638070/home?wvr=5'

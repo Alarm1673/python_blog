@@ -7,7 +7,7 @@ from models import *
 class ArticleAdmin(admin.ModelAdmin):
 #fields显示列，exclude除此外的列显示
     list_display = ('title', 'desc', 'click_count',)
-    list_display_links = ('title', 'desc','click_count' )
+    list_display_links = ('title', 'desc', 'click_count' )
 
     fieldsets = (
         (None, {
@@ -27,13 +27,13 @@ class ArticleAdmin(admin.ModelAdmin):
         )
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name','index')
-    list_display_links = ('name','index')
+    list_display = ('name', 'index')
+    list_display_links = ('name', 'index')
 
 admin.site.register(User)
 admin.site.register(Tag)
-admin.site.register(Category,CategoryAdmin)
-admin.site.register(Article,ArticleAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Article, ArticleAdmin)
 admin.site.register(Comment)
 admin.site.register(Links)
 admin.site.register(Ad)
