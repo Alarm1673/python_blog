@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^reg', do_reg, name='reg'),
     url(r'^login', do_login, name='login'),
     url(r'^category/$', category, name='category'),
+    url(r'^about', about, name='about'),
+    url(r'^direct', about, name='direct'),
 ]

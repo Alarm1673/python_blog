@@ -25,8 +25,8 @@ header { width: 1000px; margin: 20px auto; overflow: hidden; clear: both; }
 a#topnav_current { color: #000 }
 article { width: 1000px; margin: 20px auto; }
 /*footer*/
-footer { background: #333; width: 100%; clear: both; text-align: center; }
-.ft-copyright { color: #fff; line-height: 24px; }
+footer {  width: 100%; clear: both; text-align: center; }
+.ft-copyright { line-height: 35px;font-size:18px }
 .ft-list { background: url(../images/ft-wx-s.png) no-repeat right; height: 100px }
 /*返回顶部*/
 *html { background-image: url(about:blank); background-attachment: fixed; }/*解决IE6下滚动抖动的问题*/

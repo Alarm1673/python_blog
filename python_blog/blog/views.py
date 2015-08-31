@@ -26,7 +26,7 @@ def global_setting(request):
     PRO_RSS = settings.PRO_RSS
     PRO_EMAIL = settings.PRO_EMAIL
     # 分类信息获取（导航数据）
-    category_list = Category.objects.all()[:6]
+    category_list = Category.objects.all()
     # 文章归档数据
     archive_list = Article.objects.distinct_date()
     # 广告数据（同学们自己完成)  TODO
@@ -198,3 +198,11 @@ def category(request):
     except Exception as e:
         logger.error(e)
     return render(request, 'category.html', locals())
+
+#关于
+def about(request):
+    return render(request,'about.html',locals())
+
+#博客目录
+def direct(request):
+    return render(request,'direct.html',locals())
