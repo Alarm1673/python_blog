@@ -37,9 +37,9 @@ def global_setting(request):
     links_list = Links.objects.all()
     # 文章排行榜数据（按浏览量和站长推荐的功能同学们自己完成）
     # 浏览排行
-    click_count_list = Article.objects.all()
+    click_count_list = Article.objects.all()[:6]
     # 评论排行,聚合函数
-    comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')
+    comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')[:6]
     article_comment_list = [Article.objects.get(pk=comment['article']) for comment in comment_count_list]
     return locals()
 
@@ -66,7 +66,7 @@ def archive(request):
 
 # 分页代码
 def getPage(request, article_list):
-    paginator = Paginator(article_list, 2)
+    paginator = Paginator(article_list, 5)
     try:
         page = int(request.GET.get('page', 1))
         article_list = paginator.page(page)
@@ -205,4 +205,11 @@ def about(request):
 
 #博客目录
 def direct(request):
+    article_list = Article.objects.all()
+    paginator = Paginator(article_list, 10)
+    try:
+        page = int(request.GET.get('page', 1))
+        article_list = paginator.page(page)
+    except (EmptyPage, InvalidPage, PageNotAnInteger):
+        article_list = paginator.page(1)
     return render(request,'direct.html',locals())

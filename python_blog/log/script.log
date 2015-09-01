@@ -13082,3 +13082,307 @@ TemplateSyntaxError: Invalid block tag: 'endfor', expected 'elif', 'else' or 'en
 2015-08-31 16:41:59,621 [Thread-232:7648] [django.request:170] [base:get_response] [WARNING]- Not Found: /about/about
 2015-08-31 16:49:38,329 [Thread-318:5648] [django.request:170] [base:get_response] [WARNING]- Not Found: /index
 2015-08-31 16:50:07,997 [Thread-321:8520] [django.request:170] [base:get_response] [WARNING]- Not Found: /index
+2015-09-01 08:43:10,078 [Thread-28:3488] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-01 08:43:10,099 [Thread-29:3704] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-01 08:47:51,319 [Thread-2:3260] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 15, in <module>
+    url(r'^direct', about, name='direct'),
+NameError: name 'about' is not defined
+2015-09-01 08:47:59,838 [Thread-6:640] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 15, in <module>
+    url(r'^direct', about, name='direct'),
+NameError: name 'about' is not defined
+2015-09-01 08:52:15,102 [Thread-30:5036] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 208, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 112: invalid start byte
+2015-09-01 08:55:20,334 [Thread-31:4440] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 208, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:08:12,710 [Thread-2:6772] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:08:15,500 [Thread-3:3784] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:08:55,598 [Thread-4:5600] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:09:46,937 [Thread-5:4372] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:09:48,595 [Thread-6:6248] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 09:09:48,897 [Thread-7:3704] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /direct
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 210, in direct
+    return render(request,'direct.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 17, in load_template
+    template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\filesystem.py", line 38, in load_template_source
+    return fp.read(), filepath
+  File "D:\Python27\lib\codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb2 in position 143: invalid start byte
+2015-09-01 10:12:30,196 [Thread-2:6312] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 109, in article
+    return render(request, 'article.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 208, in render
+    with context.bind_template(self):
+  File "D:\Python27\lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "D:\Python27\lib\site-packages\django\template\context.py", line 241, in bind_template
+    updates.update(processor(self.request))
+  File "E:\python_blog\python_blog\blog\views.py", line 44, in global_setting
+    print article_comment_list.click_count
+AttributeError: 'list' object has no attribute 'click_count'
+2015-09-01 10:12:54,917 [Thread-4:5724] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 55, in index
+    return render(request, 'index.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 208, in render
+    with context.bind_template(self):
+  File "D:\Python27\lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "D:\Python27\lib\site-packages\django\template\context.py", line 241, in bind_template
+    updates.update(processor(self.request))
+  File "E:\python_blog\python_blog\blog\views.py", line 44, in global_setting
+    print article_comment_list.click_count
+AttributeError: 'list' object has no attribute 'click_count'
+2015-09-01 15:39:41,963 [Thread-28:2440] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-01 15:39:41,973 [Thread-29:5868] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
