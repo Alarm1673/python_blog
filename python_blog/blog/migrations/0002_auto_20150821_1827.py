@@ -114,10 +114,6 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': '\u53cb\u60c5\u94fe\u63a5',
             },
         ),
-        migrations.RenameModel(
-            old_name='Catagory',
-            new_name='Category',
-        ),
         migrations.AddField(
             model_name='article',
             name='category',

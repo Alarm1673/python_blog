@@ -79,7 +79,6 @@ def article(request):
     try:
         # 获取文章id
         id = request.GET.get('id', None)
-        print id
         try:
             # 获取文章信息
             article = Article.objects.get(pk=id)
@@ -199,17 +198,21 @@ def category(request):
         logger.error(e)
     return render(request, 'category.html', locals())
 
-#关于
+#关于和留言
 def about(request):
     return render(request,'about.html',locals())
 
 #博客目录
 def direct(request):
     article_list = Article.objects.all()
-    paginator = Paginator(article_list, 10)
-    try:
-        page = int(request.GET.get('page', 1))
-        article_list = paginator.page(page)
-    except (EmptyPage, InvalidPage, PageNotAnInteger):
-        article_list = paginator.page(1)
+    article_list = getPage(request, article_list)
     return render(request,'direct.html',locals())
+
+#标签云
+def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+

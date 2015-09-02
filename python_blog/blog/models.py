@@ -128,3 +128,15 @@ class Ad(models.Model):
 
     def __unicode__(self):
         return self.title
+
+#留言
+class Message(models.Model):
+    name = models.CharField(max_length=50,verbose_name='昵称')
+    call_url = models.URLField(null=True,blank=True,verbose_name='URL地址')
+
+    class Meta:
+        verbose_name = u'留言'
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.name

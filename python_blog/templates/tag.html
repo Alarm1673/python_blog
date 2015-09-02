@@ -8,8 +8,8 @@
 {% block left_content %}
 
     <div class="topnews">
-      <h2>博客目录</h2>
-        {% for article in article_list%}
+      <h2>{{ tag.name }}</h2>
+        {% for article in article_tag_list%}
       <div class="blogs">
         <ul>
           <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
@@ -19,7 +19,6 @@
       </div>
         {% endfor %}
     </div>
-    {% include 'pagination.html' %}
 
 {% endblock %}
 </body>

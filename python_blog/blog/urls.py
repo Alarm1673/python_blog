@@ -3,6 +3,7 @@ from django.conf.urls import url
 from blog.views import *
 
 urlpatterns = [
+
     url(r'^$', index,  name='index'),
     url(r'^archive/$', archive,  name='archive'),
     url(r'^article/$', article, name='article'),
@@ -13,4 +14,6 @@ urlpatterns = [
     url(r'^category/$', category, name='category'),
     url(r'^about', about, name='about'),
     url(r'^direct', direct, name='direct'),
+    url(r'^tag', tag, name='tag'),
+
 ]

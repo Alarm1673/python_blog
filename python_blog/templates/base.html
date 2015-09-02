@@ -25,8 +25,8 @@
   <nav id="topnav" class="f_r">
     <ul>
         <a href="/">首页</a>
-        <a href="direct">博客</a>
-        <a href="about">关于我</a>
+        <a href="{% url 'direct' %}">博客</a>
+        <a href="{% url 'about' %}">关于我</a>
     </ul>
     <script src="{% static 'js/nav.js' %}"></script>
   </nav>
@@ -99,7 +99,7 @@ window.onload = function ()
       <h3>标签云</h3>
       <ul>
           {% for tag in tag_list %}
-            <li><a href="/">{{ tag.name }}</a></li>
+            <li><a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a></li>
           {% endfor %}
       </ul>
     </div>
