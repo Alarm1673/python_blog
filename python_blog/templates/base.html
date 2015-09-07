@@ -127,7 +127,21 @@ window.onload = function ()
 
 <footer>
   <p class="ft-copyright">{{ SITE_NAME }} 蜀ICP备xxxxxxx号-1</p>
-  <div id="box-right"> <a id="gotop" href="#"></a>
+  <div class="scroll" id="scroll" style="display:none;">回到顶部</div>
+      <script type="text/javascript">
+        $(function(){
+            showScroll();
+            function showScroll(){
+                $(window).scroll( function() {
+                    var scrollValue=$(window).scrollTop();
+                    scrollValue > 100 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+                } );
+                $('#scroll').click(function(){
+                    $("html,body").animate({scrollTop:0},200);
+                });
+            }
+        })
+	</script>
       <div id="musicPlayer"><img src="{% static 'images/bgmusic.png' %}"></div>
       <script type="text/javascript" src="{% static 'js/jquery.simplemusic.js' %}" ></script>
       <script type="text/javascript">

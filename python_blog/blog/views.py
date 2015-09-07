@@ -25,12 +25,8 @@ def global_setting(request):
     WEIBO_TENCENT = settings.WEIBO_TENCENT
     PRO_RSS = settings.PRO_RSS
     PRO_EMAIL = settings.PRO_EMAIL
-    # 分类信息获取（导航数据）
-    category_list = Category.objects.all()
     # 文章归档数据
     archive_list = Article.objects.distinct_date()
-    # 广告数据（同学们自己完成)  TODO
-    ad_list = Ad.objects.all()
     # 标签云数据（同学们自己完成）
     tag_list = Tag.objects.all()
     # 友情链接数据（同学们自己完成）
@@ -119,6 +115,7 @@ def comment_post(request):
                                              content=comment_form.cleaned_data["comment"],
                                              article_id=comment_form.cleaned_data["article"],
                                              user=request.user if request.user.is_authenticated() else None)
+            print comment_form.cleaned_data["comment"]
             comment.save()
         else:
             return render(request, 'failure.html', {'reason': comment_form.errors})

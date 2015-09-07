@@ -26,9 +26,7 @@
       <ol class="commentlist">
           {% for comment in comment_list %}
           <li id="comment-59418">
-                <div class="top"><a href='{{ comment.url }}' rel='external nofollow' class='url'>{{ comment.username }}</a><span class="time"> @<a href="#comment-59418" title=""> {{ comment.date_publish | date:'Y-m-d H:i:s' }}</a></span>
-                    <a href="">回复</a>
-                </div>
+                <div class="top"><a href='{{ comment.url }}' rel='external nofollow' class='url'>{{ comment.username }}</a><span class="time"> @ <a href="#comment-59418" title="">{{ comment.date_publish | date:'Y-m-d H:i:s' }}</a></span></div>
                 <div><img alt='' src='{% static 'images/default.jpg' %}' class='avatar avatar-32 photo' height='32' width='32' /></div>
 
                 <div class="body">
@@ -41,7 +39,8 @@
                   <div class="top"><a href="{{ children_comment.url }}" rel="external nofollow" class="url">{{ children_comment.username }}</a><span class="time"> @ <a href="#comment-59543" title="">{{ children_comment.date_publish | date:'Y-m-d H:i:s' }}</a></span></div>
                   <div><img alt="" src="{% static 'images/default.jpg' %}" class="avatar avatar-32 photo" height="32" width="32"></div>
 
-                  <div class="body">{{ children_comment.content }}</div>
+                  <div class="body">
+                                        {{ children_comment.content }}                  </div>
                 </div>
           </li>
           {% endfor %}
@@ -66,12 +65,14 @@
     <p><label for="url">地址:</label>{{ comment_form.url }}</p>
 
 
-    <p>{{ comment_form.comment }}</p>
+        <p>{{ comment_form.comment }}
+        </p>
 
     <p>
         {{ comment_form.article }}
         <input name="submit" type="submit" id="submit" tabindex="5" value="提交评论" class="button" />
     </p>
+
     </form>
     </div>
 {% endblock %}

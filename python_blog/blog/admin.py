@@ -11,7 +11,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('title', 'desc', 'content', 'user', 'category', 'tag', )
+            'fields': ('title', 'desc', 'content', 'user', 'tag', )
         }),
         ('高级设置', {
             'classes': ('collapse',),
@@ -26,14 +26,10 @@ class ArticleAdmin(admin.ModelAdmin):
             '/static/js/kindeditor-4.1.10/config.js',
         )
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'index')
-    list_display_links = ('name', 'index')
 
 admin.site.register(User)
 admin.site.register(Tag)
-admin.site.register(Category, CategoryAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Comment)
 admin.site.register(Links)
-admin.site.register(Ad)
+

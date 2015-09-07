@@ -16,7 +16,7 @@ a:hover { text-decoration: none; }
 .r_box { width: 300px; }
 /* 头部信息 */
 header { width: 1000px; margin: 20px auto; overflow: hidden; clear: both; }
-#topnav { width: 100%; background: #48AE15; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; }
+#topnav { width: 100%; background: #636B60; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; }
 #topnav ul{ margin-left:50px; }
 #topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
 #topnav a:hover { background: #fff; color: #000; }
@@ -36,6 +36,7 @@ _margin-bottom: 15px; }/*解决IE6下不兼容 position:fixed 的问题*/
 #togbook { margin: 5px 0; background-position: 10px -36px; }
 #gotop { background-position: 12px 10px; }
 #togbook:hover, #gotop:hover { opacity: 0.5 }
+.scroll{width:80px;height:60px;background:#64BFAE;color:#fff;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;}
 /*标签云*/
 .cloud { width: 100%; clear: both; overflow: hidden }
 .cloud h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px; }

@@ -752,3 +752,4016 @@ FieldError: Cannot resolve keyword 'name' into field. Choices are: category, cat
 2015-09-02 16:31:01,966 [Thread-9:2164] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-09-02 16:31:01,973 [Thread-10:6724] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-09-02 16:35:05,434 [Thread-2:2892] [django.request:170] [base:get_response] [WARNING]- Not Found: /message
+2015-09-02 16:59:04,085 [Thread-4:6000] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 9, in <module>
+    url(r'^about/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
+NameError: name 'upload_image' is not defined
+2015-09-02 18:00:45,966 [Thread-2:7032] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 16, in <module>
+    url(r'^reg', do_reg, name='reg'),
+NameError: name 'do_reg' is not defined
+2015-09-02 18:01:17,127 [Thread-4:5192] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 108, in article
+    return render(request, 'article.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'logout' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2015-09-02 18:02:19,221 [Thread-2:6884] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:02:49,190 [Thread-4:2964] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:03:19,331 [Thread-5:3200] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:03:56,382 [Thread-6:7140] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:03:59,124 [Thread-7:5092] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:03:59,395 [Thread-8:6988] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:03:59,615 [Thread-9:3932] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:04:57,342 [Thread-10:7004] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:38,005 [Thread-12:5616] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:38,869 [Thread-13:3972] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:39,473 [Thread-14:2152] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:39,786 [Thread-15:2964] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:43,934 [Thread-16:6940] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:44,269 [Thread-17:7092] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:44,540 [Thread-18:4352] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:44,960 [Thread-19:6776] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:45,165 [Thread-20:5364] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:45,371 [Thread-21:6044] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:45,674 [Thread-22:2164] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:05:45,892 [Thread-23:3780] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:06:05,233 [Thread-24:1660] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-02 18:08:13,354 [Thread-2:2956] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 3, in <module>
+    from blog.views import *
+  File "E:\python_blog\python_blog\blog\views.py", line 223
+    '''
+def do_reg(request):
+    try:
+        if request.method == 'POST':
+            reg_form = RegForm(request.POST)
+            if reg_form.is_valid():
+                # 娉ㄥ唽
+                user = User.objects.create(username=reg_form.cleaned_data["username"],
+                                    email=reg_form.cleaned_data["email"],
+                                    url=reg_form.cleaned_data["url"],
+                                    password=make_password(reg_form.cleaned_data["password"]),)
+                user.save()
+
+                # 鐧诲綍
+                user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                login(request, user)
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': reg_form.errors})
+        else:
+            reg_form = RegForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'reg.html', locals())
+
+# 鐧诲綍
+def do_login(request):
+    try:
+        if request.method == 'POST':
+            login_form = LoginForm(request.POST)
+            if login_form.is_valid():
+                # 鐧诲綍
+                username = login_form.cleaned_data["username"]
+                password = login_form.cleaned_data["password"]
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    user.backend = 'django.contrib.auth.backends.ModelBackend' # 鎸囧畾榛樿鐨勭櫥褰曢獙璇佹柟寮?                    login(request, user)
+                else:
+                    return render(request, 'failure.html', {'reason': '鐧诲綍楠岃瘉澶辫触'})
+                return redirect(request.POST.get('source_url'))
+            else:
+                return render(request, 'failure.html', {'reason': login_form.errors})
+        else:
+            login_form = LoginForm()
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'login.html', locals())
+
+def category(request):
+    try:
+        # 鍏堣幏鍙栧鎴风鎻愪氦鐨勪俊鎭?        cid = request.GET.get('cid', None)
+        try:
+            category = Category.objects.get(pk=cid)
+        except Category.DoesNotExist:
+            return render(request, 'failure.html', {'reason': '鍒嗙被涓嶅瓨鍦?})
+        article_list = Article.objects.filter(category=category)
+        article_list = getPage(request, article_list)
+    except Exception as e:
+        logger.error(e)
+    return render(request, 'category.html', locals())
+
+#鍏充簬鍜岀暀瑷€
+def about(request):
+    return render(request,'about.html',locals())
+
+#鍗氬鐩綍
+def direct(request):
+    article_list = Article.objects.all()
+    article_list = getPage(request, article_list)
+    return render(request,'direct.html',locals())
+
+#鏍囩浜?def tag(request):
+    tid = request.GET.get('id',None)
+    tag = Tag.objects.get(pk=tid)
+    article_tag_list = Article.objects.filter(tag=tag)
+    article_tag_list = getPage(request, article_tag_list)
+    return render(request,'tag.html',locals())
+       
+                    
+        
+                                    
+                                            
+                                   
+                        
+                                                                                      
+                                                                         
+                                                                     
+                                                                                               
+                           
+
+                        
+                                                                                                              
+                                    
+                                                               
+                 
+                                                                                   
+             
+                                
+                          
+                       
+                                                
+
+        
+                      
+        
+                                    
+                                                
+                                     
+                        
+                                                              
+                                                              
+                                                                         
+                                    
+                                                                                                                  
+                                        
+                     
+                                                                                            
+                                                               
+                 
+                                                                                     
+             
+                                    
+                          
+                       
+                                                  
+
+                      
+        
+                                           
+                                          
+            
+                                                   
+                                     
+                                                                                 
+                                                                
+                                                     
+                          
+                       
+                                                     
+
+                
+                   
+                                                
+
+             
+                    
+                                        
+                                                 
+                                                 
+
+          
+                 
+                                    
+                                 
+                                                      
+                                                         
+                                             ^
+SyntaxError: EOF while scanning triple-quoted string literal
+2015-09-06 15:19:30,082 [Thread-28:6416] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-06 15:19:30,098 [Thread-29:7960] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-07 09:09:03,584 [Thread-28:4944] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-07 09:09:03,595 [Thread-29:4424] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-07 15:16:55,612 [Thread-3:4940] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-07 15:16:55,641 [Thread-5:5540] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico

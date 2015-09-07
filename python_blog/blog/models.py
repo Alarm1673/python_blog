@@ -31,17 +31,6 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.name
 
-#分类
-class Category(models.Model):
-    name = models.CharField(max_length=30, verbose_name='分类名称')
-    index = models.IntegerField(verbose_name='分类的排序')
-
-    class Meta:
-        verbose_name = '分类'
-        verbose_name_plural = verbose_name
-
-    def __unicode__(self):
-        return self.name
 
 #自定义文章管理器
 #1.新加一个数据处理的方法
@@ -65,7 +54,6 @@ class Article(models.Model):
     is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
     date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
     user = models.ForeignKey(User, verbose_name='用户')
-    category = models.ForeignKey(Category, blank=True, null=True, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
 
     objects = ArticleManager()
@@ -112,22 +100,6 @@ class Links(models.Model):
     def __unicode__(self):
         return self.title
 
-# 广告
-class Ad(models.Model):
-    title = models.CharField(max_length=50, verbose_name='广告标题')
-    description = models.CharField(max_length=200,  verbose_name='广告描述')
-    image_url = models.ImageField(upload_to='ad/%Y/%m', verbose_name='图片路径')
-    callback_url = models.URLField(null=True, blank=True, verbose_name='回调url')
-    date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
-    index = models.IntegerField(default=999, verbose_name='排列顺序(从小到大)')
-
-    class Meta:
-        verbose_name = u'广告'
-        verbose_name_plural = verbose_name
-        ordering = ['index', 'id']
-
-    def __unicode__(self):
-        return self.title
 
 #留言
 class Message(models.Model):
