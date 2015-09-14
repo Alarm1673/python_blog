@@ -1,8 +1,8 @@
 @charset "gb2312";
 /* 共用css */
 * { margin: 0; padding: 0 }
-body { font: 12px/1.5 'Microsoft Yahei', 'Simsun'; color: #666666; background: #fff }
-img { border: 0; display: block }
+body { font: 12px/1.5 'Microsoft Yahei', 'Simsun'; color: #666666; background: #fff;background-color: antiquewhite; }
+img { border: 0; display: block}
 ul { list-style: none; }
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
 a { outline: none; }
@@ -15,9 +15,9 @@ a:hover { text-decoration: none; }
 .l_box { width: 670px; }
 .r_box { width: 300px; }
 /* 头部信息 */
-header { width: 1000px; margin: 20px auto; overflow: hidden; clear: both; }
+header { width: 100%; margin: 20px auto; overflow: hidden; clear: both; }
 #topnav { width: 100%; background: #636B60; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; }
-#topnav ul{ margin-left:50px; }
+#topnav ul{ margin-left:23%; }
 #topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
 #topnav a:hover { background: #fff; color: #000; }
 #topnav a { color: #FFF }
@@ -36,7 +36,7 @@ _margin-bottom: 15px; }/*解决IE6下不兼容 position:fixed 的问题*/
 #togbook { margin: 5px 0; background-position: 10px -36px; }
 #gotop { background-position: 12px 10px; }
 #togbook:hover, #gotop:hover { opacity: 0.5 }
-.scroll{width:80px;height:60px;background:#64BFAE;color:#fff;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;}
+.scroll{width:80px;height:60px;background:#64BFAE;color:#fff;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;border-radius:50%;}
 /*标签云*/
 .cloud { width: 100%; clear: both; overflow: hidden }
 .cloud h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px; }
@@ -65,7 +65,7 @@ _margin-bottom: 15px; }/*解决IE6下不兼容 position:fixed 的问题*/
 .bd-news ul li a { display: block; }
 .bd-news ul li a:hover { color: #000; }
 .bd-news ul li:hover { border-bottom: #000 1px solid; }/* 鼠标放上去的效果 */
-.logo{ margin-bottom:20px; padding-left:10px; }
+.logo{ margin-bottom:20px; padding-left:23%; }
 .logo h1{ font-size:30px; font-weight:blod; }
 .font-size-18{ font-size:18px; }
 
@@ -214,6 +214,7 @@ h3 {
 	padding: 2px;
 	border: 1px solid #dddddd;
 	margin: 5px;
+	border-radius: 50%;
 }
 
 /*------------------------ Comments Form ------------------------*/

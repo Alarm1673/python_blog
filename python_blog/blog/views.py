@@ -115,7 +115,6 @@ def comment_post(request):
                                              content=comment_form.cleaned_data["comment"],
                                              article_id=comment_form.cleaned_data["article"],
                                              user=request.user if request.user.is_authenticated() else None)
-            print comment_form.cleaned_data["comment"]
             comment.save()
         else:
             return render(request, 'failure.html', {'reason': comment_form.errors})

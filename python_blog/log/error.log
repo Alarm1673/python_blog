@@ -1,0 +1,7 @@
+2015-09-14 08:45:40,678 [Thread-3:6556] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:46:04,275 [Thread-27:3968] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:46:55,974 [Thread-43:2812] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:47:16,430 [Thread-50:6468] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:53:39,430 [Thread-42:6600] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:54:50,493 [Thread-79:5816] [blog.views:124] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
+2015-09-14 08:56:04,622 [Thread-3:7060] [blog.views:123] [views:comment_post] [ERROR]- 'CommentForm' object has no attribute 'cleaned_data'
