@@ -5139,3 +5139,97 @@ Traceback (most recent call last):
 TemplateSyntaxError: Could not parse the remainder: '("http://")==-1' from 'comment_form.url.find("http://")==-1'
 2015-09-14 15:14:56,611 [Thread-4:7744] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-09-14 15:14:56,635 [Thread-5:7236] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 09:33:48,982 [Thread-4:2084] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 09:33:48,989 [Thread-5:6452] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 11:12:45,230 [Thread-3:2316] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 11:12:45,236 [Thread-4:960] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 13:35:14,779 [Thread-348:4392] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 13:35:14,785 [Thread-349:6768] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 13:50:27,734 [Thread-2:4288] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 19, in <module>
+    url(r'^about', about, name='about'),
+NameError: name 'about' is not defined
+2015-09-15 13:51:17,605 [Thread-2:1860] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 121, in article
+    return render(request, 'article.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 208, in render
+    with context.bind_template(self):
+  File "D:\Python27\lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "D:\Python27\lib\site-packages\django\template\context.py", line 241, in bind_template
+    updates.update(processor(self.request))
+  File "E:\python_blog\python_blog\blog\views.py", line 24, in global_setting
+    category_list = Category.objects.all()[:6]
+NameError: global name 'Category' is not defined
+2015-09-15 13:51:37,816 [Thread-2:2308] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\python_blog\urls.py", line 27, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:\python_blog\python_blog\blog\urls.py", line 18, in <module>
+    url(r'^category/$', category, name='category'),
+NameError: name 'category' is not defined
+2015-09-15 13:52:14,115 [Thread-3:4900] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 121, in article
+    return render(request, 'article.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 208, in render
+    with context.bind_template(self):
+  File "D:\Python27\lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "D:\Python27\lib\site-packages\django\template\context.py", line 241, in bind_template
+    updates.update(processor(self.request))
+  File "E:\python_blog\python_blog\blog\views.py", line 24, in global_setting
+    category_list = Category.objects.all()[:6]
+NameError: global name 'Category' is not defined
+2015-09-15 15:35:49,053 [Thread-386:7740] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 15:35:49,062 [Thread-387:7640] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 17:32:20,641 [Thread-128:8032] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-15 17:32:20,651 [Thread-129:7556] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico

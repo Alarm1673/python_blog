@@ -23,11 +23,13 @@
       <p>{{ SITE_DESC }}</p>
   </div>
   <nav id="topnav" class="f_r">
+      <div class="logo_top">
     <ul>
         <a href="/">首页</a>
         <a href="{% url 'direct' %}">博客</a>
         <a href="{% url 'about' %}">关于我</a>
     </ul>
+          </div>
     <script src="{% static 'js/nav.js' %}"></script>
   </nav>
 </header>

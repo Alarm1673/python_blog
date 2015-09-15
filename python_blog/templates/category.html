@@ -9,7 +9,7 @@
         <ul>
           <h3><a href="/">{{ article.title }}</a></h3>
           <p>{{ article.desc }}</p>
-          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="/">{{ tag.name }}</a>&nbsp;</span>{% endfor %}<span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r">浏览（<a href="{% url 'article' %}?id={{ article.id }}">{{ article.click_count }}</a>）</span><span class="pingl f_r">评论（<a href="{% url 'article' %}?id={{ article.id }}">{{ article.comment_set.all.count }}</a>）</span></p>
+          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="/">{{ tag.name }}</a>&nbsp;</span>{% endfor %}<span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r"><a href="{% url 'article' %}?id={{ article.id }}">浏览（{{ article.click_count }}）</a></span><span class="pingl f_r"><a href="{% url 'article' %}?id={{ article.id }}">评论（{{ article.comment_set.all.count }}）</a></span></p>
         </ul>
       </div>
       {% endfor %}

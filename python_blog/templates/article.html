@@ -49,20 +49,20 @@
 
     <div id="commentform">
     <h3 id="respond">发表评论</h3>
-    <!--
+
     {% if not request.user.is_authenticated %}
     <div class='login_info'>还没有登陆？可以登录后再评论哦。<b><a href="{% url 'login' %}">&raquo;去登录</a>&nbsp;<a href="{% url 'reg' %}">&raquo;去注册</a></b></div>
     {% else %}
     <div class='login_info'><b>{{ request.user.username }}</b>,快来写点评论吧!&nbsp;<a href="{% url 'logout' %}">注销</a></div>
     {% endif %}
-    -->
+
     <form action="{% url 'comment_post' %}" method="post">
     {% csrf_token %}
     <p><label for="author">昵称:</label>{{ comment_form.author }}<label style="color:red">*</label></p>
 
     <p><label for="email">邮箱:</label>{{ comment_form.email }}<label style="color:red">*</label></p>
 
-    <p><label for="url">地址:</label>{{ comment_form.url }}</p>
+    <p><label for="url">地址:</label>{{ comment_form.url }}<label style="color:red">*</label></p>
 
 
         <p>{{ comment_form.comment }}

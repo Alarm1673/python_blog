@@ -123,7 +123,7 @@ AUTH_USER_MODEL = 'blog.User'
 
 #网站的基本信息配置
 SITE_URL = 'http://localhost:8000/'
-SITE_NAME = '优游幻世的个人博客'
+SITE_NAME = '优游幻世的博客'
 SITE_DESC = '专注Python开发'
 WEIBO_SINA = 'http://weibo.com/'
 WEIBO_TENCENT = 'http://t.qq.com'
