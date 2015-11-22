@@ -49,6 +49,10 @@ def index(request):
         logger.error(e)
     return render(request, 'index.html', locals())
 
+def index1(request):
+
+    return render(request, 'index1.html', locals())
+
 def archive(request):
     try:
         # 先获取客户端提交的信息
@@ -211,4 +215,8 @@ def tag(request):
     article_tag_list = Article.objects.filter(tag=tag)
     article_tag_list = getPage(request, article_tag_list)
     return render(request,'tag.html',locals())
+
+#用户
+
+
 

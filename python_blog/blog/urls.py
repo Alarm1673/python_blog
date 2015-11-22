@@ -9,6 +9,7 @@ urlpatterns = [
                 {"document_root": settings.MEDIA_ROOT,}),
     url(r'^about/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
     url(r'^$', index,  name='index'),
+    #url(r'^$', index1,  name='index1'),
     url(r'^archive/$', archive,  name='archive'),
     url(r'^article/$', article, name='article'),
     url(r'^comment/post/$', comment_post, name='comment_post'),

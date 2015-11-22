@@ -1,20 +1,43 @@
-{% extends 'base.html' %}
 {% load staticfiles %}
-{% block left_content %}
-
-    <div class="topnews">
-      <h2>最新文章</h2>
-        {% for article in article_list%}
-      <div class="blogs">
-        <ul>
-          <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
-          <p>{{ article.desc }}</p>
-          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a>{% endfor %}</span><span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r"><a href="{% url 'article' %}?id={{ article.id }}">浏览（{{ article.click_count }}）</a></span><span class="pingl f_r"><a href="{% url 'article' %}?id={{ article.id }}">评论（{{ article.comment_set.all.count }}）</a></span></p>
-        </ul>
-      </div>
-        {% endfor %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ SITE_NAME }}</title>
+<meta name="keywords" content="{{ SITE_NAME }}" />
+<meta name="description" content="{{ SITE_DESC }}" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+{% block custom_css %}{% endblock %}
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src='{% static 'js/bootstrap.min.js' %}'></script>
+<script type="text/javascript" src="{% static 'js/sliders.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-1.9.0.min.js' %}" ></script>
+<!--[if lt IE 9]>
+<![endif]-->
+{% block custom_js %}{% endblock %}
+</head>
+<body>
+    <div class="intro-header">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>Alarm Page</h1>
+                    <h3>Dreamy Pisces man</h3>
+                    <hr class="intro-divider">
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="{% url 'direct' %}" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Blog</span></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">About</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    {% include 'pagination.html' %}
-  </div>
-  </div>
-{% endblock %}
+  </body>
+</html>
+

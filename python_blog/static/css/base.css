@@ -1,7 +1,7 @@
 @charset "gb2312";
 /* 共用css */
 * { margin: 0; padding: 0 }
-body { font: 15px/1.5 'Microsoft Yahei', 'Simsun'; color: #666666; background: #F0F0F0 none repeat scroll 0% 0%; }
+body { font: 15px/1.5 'Microsoft Yahei', 'Simsun'; color: #666666; background: #fff none repeat scroll 0% 0%; }
 img { border: 0; display: block}
 ul { list-style: none; }
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
@@ -11,23 +11,23 @@ a:hover { text-decoration: none; }
 .clear { clear: both; }
 .blank { height: 5px; overflow: hidden; width: 100%; margin: auto; clear: both }
 .f_l { float: left }
-.f_r { float: right }
+.f_r { float: right;}
 .l_box { width: 670px; }
 .r_box { width: 300px; }
 /* 头部信息 */
-header { width: 100%; margin: 20px auto; overflow: hidden; clear: both; }
-#topnav { width: 100%; background: #636B60; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; }
+.row{ margin-right: -15px;margin-left: -15px;}
+.navbar-default {background: #428BCA;}
+#topnav { width: 100%; background: #428BCA; height: 46px; line-height: 46px; text-align: left; border-radius: 46px; padding-left: 22px;}
 #topnav ul{ margin-left:23%; }
 #topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
 #topnav a:hover { background: #fff; color: #000; }
-#topnav a { color: #FFF }
-#topnav_current { background: #F3FF41; }/* 高亮选中颜色 */
-a#topnav_current { color: #000 }
-article { width: 1000px; margin: 20px auto; }
-/*footer*/
-footer {  width: 100%; clear: both; text-align: center; }
-.ft-copyright {clear: both; width: auto; font-family: "Courgette",cursive; text-align: center; font-size: 15px; top: 110px; position: relative; color: #000; }
-.ft-list { background: url(../images/ft-wx-s.png) no-repeat right; height: 100px }
+#topnav a { color: #0C0C0C;padding-top:15px }
+#topnav_current { background: #CDCECA; }/* 高亮选中颜色 */
+
+/* 底部样式和回到顶部样式 */
+.bs-docs-footer { padding-top: 40px;padding-bottom: 40px;margin-top: 100px;color: #767676;text-align: right;border-top: 1px solid #E5E5E5;}
+.ft-copyright { clear: both; width: auto; font-family: "Courgette",cursive;text-align: center; font-size: 15px; top: 20px; relative; color: #000; position:fixed;}
+.scroll { width:60px;height:60px;color:#2CAF4F;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;border-radius:50%;}
 /*返回顶部*/
 *html { background-image: url(about:blank); background-attachment: fixed; }/*解决IE6下滚动抖动的问题*/
 #box-right { width: 54px; float: right; position: fixed; right: 50px; bottom: 105px; _position: absolute; _bottom: auto; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
@@ -37,8 +37,8 @@ _margin-bottom: 15px; }/*解决IE6下不兼容 position:fixed 的问题*/
 #topnew{ padding-left: 23%;}
 #gotop { background-position: 12px 10px; }
 #togbook:hover, #gotop:hover { opacity: 0.5 }
-.scroll{width:60px;height:60px;background:#64BFAE;color:#fff;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;border-radius:50%;}
-/*标签云*/
+.scroll{width:60px;height:60px;color:#287D53;line-height:60px;text-align:center;position:fixed;right:55px;bottom:50px;cursor:pointer;font-size:18px;border-radius:50%;}
+/* 标签云*/
 .cloud { width: 100%; clear: both; overflow: hidden }
 .cloud h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px; }
 .cloud ul { margin: 20px 0 }
@@ -62,7 +62,7 @@ _margin-bottom: 15px; }/*解决IE6下不兼容 position:fixed 的问题*/
 #tab li.cur a { color: #fff; background: #f77825; }
 .bd { display: none }
 .bd-news ul { padding: 10px 0 0 10px; background: url(../images/ph2.png) no-repeat 10px 29px; }
-.bd-news ul li { border-bottom: solid 1px #EAEAEA; line-height: 30px; height: 30px; overflow: hidden; font-size: 14px; padding: 10px 0 0 30px; }
+.bd-news ul li { border-bottom: solid 1px #EAEAEA; line-height: 30px; height: 40px; overflow: hidden; font-size: 14px; padding: 10px 0 0 30px; }
 .bd-news ul li a { display: block; }
 .bd-news ul li a:hover { color: #000; }
 .bd-news ul li:hover { border-bottom: #000 1px solid; }/* 鼠标放上去的效果 */

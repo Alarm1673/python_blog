@@ -6,155 +6,118 @@
 <title>{{ SITE_NAME }}</title>
 <meta name="keywords" content="{{ SITE_NAME }}" />
 <meta name="description" content="{{ SITE_DESC }}" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'css/base.css' %}" rel="stylesheet">
 <link href="{% static 'css/index.css' %}" rel="stylesheet">
 {% block custom_css %}{% endblock %}
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src='{% static 'js/bootstrap.min.js' %}'></script>
 <script type="text/javascript" src="{% static 'js/sliders.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery-1.9.0.min.js' %}" ></script>
+<script type="text/javascript" src="{% static 'js/jquery.simplemusic.js' %}" ></script>
 <!--[if lt IE 9]>
 <![endif]-->
 {% block custom_js %}{% endblock %}
 </head>
 <body>
-<header>
-  <div class="logo">
-      <h1>{{ SITE_NAME }}</h1>
-      <p>{{ SITE_DESC }}</p>
-  </div>
-  <nav id="topnav" class="f_r">
-      <div class="logo_top">
-    <ul>
-        <a href="/">首页</a>
-        <a href="{% url 'direct' %}">博客</a>
-        <a href="{% url 'about' %}">关于我</a>
-    </ul>
-          </div>
-    <script src="{% static 'js/nav.js' %}"></script>
-  </nav>
-</header>
 
-<article>
-  <div class="l_box f_l">
-      {% block left_content %}{% endblock %}
-  </div>
-  <div class="r_box f_r">
-    <div class="tit01">
-      <h3>关注我</h3>
-      <div class="gzwm">
-        <ul>
-          <li><a class="xlwb" href="{{ WEIBO_SINA }}" target="_blank">新浪微博</a></li>
-          <li><a class="txwb" href="{{ WEIBO_TENCENT }}" target="_blank">腾讯微博</a></li>
-          <li><a class="rss" href="{{ PRO_RSS }}" target="_blank">RSS</a></li>
-          <li><a class="wx" href="{{ PRO_EMAIL }}">邮箱</a></li>
-        </ul>
-      </div>
-    </div>
-    <!--tit01 end-->
-    <div class="moreSelect" id="lp_right_select">
-      <script>
-window.onload = function ()
-{
-  var oLi = document.getElementById("tab").getElementsByTagName("li");
-  var oUl = document.getElementById("ms-main").getElementsByTagName("div");
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="container-fluid">
+				 <div class="navbar-header" id="topnav">
+					<a class="navbar-brand" href="{% url 'index' %}">首页</a>
+					<a class="navbar-brand" href="{% url 'direct' %}">博客</a>
+					<a class="navbar-brand" href="{% url 'about' %}">关于</a>
+					<script src="{% static 'js/nav.js' %}"></script>
+				 </div>
+			</div>
+		</div>
+	</nav>
 
-  for(var i = 0; i < oLi.length; i++)
-  {
-    oLi[i].index = i;
-    oLi[i].onmouseover = function ()
-    {
-      for(var n = 0; n < oLi.length; n++) oLi[n].className="";
-      this.className = "cur";
-      for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
-      oUl[this.index].style.display = "block"
-    }
-  }
-}
-</script>
-      <div class="ms-top">
-        <ul class="hd" id="tab">
-          <li class="cur"><a href="/">浏览排行</a></li>
-          <li><a href="/">评论排行</a></li>
-        </ul>
-      </div>
-      <div class="ms-main" id="ms-main">
-        <div style="display: block;" class="bd bd-news" >
-          <ul>
-              {% for click_count in click_count_list %}
-            <li><a href="{% url 'article' %}?id={{ click_count.id }}" target="_blank">{{ click_count.title }}</a></li>
-              {% endfor %}
-          </ul>
-        </div>
-        <div  class="bd bd-news">
-          <ul>
-            {% for article in article_comment_list %}
-            <li><a href="{% url 'article' %}?id={{ article.id }}" target="_blank">{{ article.title}}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <!--ms-main end -->
-    </div>
-    <!--切换卡 moreSelect end -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8" role="main">
+                <!-- <div class="blogs"> -->
+				   {% block left_content %}{% endblock %}
+                 <!--</div> -->
+			</div>
 
-    <div class="cloud">
-      <h3>标签云</h3>
-      <ul>
-          {% for tag in tag_list %}
-            <li><a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a></li>
-          {% endfor %}
-      </ul>
-    </div>
-    <div class="tuwen">
-      <h3>文章归档</h3>
-      <ul>
-        {% for archive in archive_list %}
-        <li>
-          <p><span class="tutime font-size-18"><a href='{% url 'archive' %}?year={{ archive | slice:"4" }}&month={{ archive | slice:"5:7" }}'>{{ archive }}</a></span></p>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="links">
-      <h3>友情链接</h3>
-      <ul>
-          {% for links in links_list %}
-        <li><a href="{{ links.callback_url }}">{{ links.title }}</a></li>
-          {% endfor %}
-      </ul>
-    </div>
-  </div>
-  <!--r_box end -->
-</article>
+			<div class="col-md-4" role="complementary">
+				<div class="tit01">
+					<h3>关注我</h3>
+					<div class="gzwm">
+						<ul>
+						  <li><a class="xlwb" href="{{ WEIBO_SINA }}" target="_blank">新浪微博</a></li>
+						  <li><a class="txwb" href="{{ WEIBO_TENCENT }}" target="_blank">腾讯微博</a></li>
+						  <li><a class="rss" href="{{ PRO_RSS }}" target="_blank">RSS</a></li>
+						  <li><a class="wx" href="{{ PRO_EMAIL }}">邮箱</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- tit01结束 -->
 
-<footer>
-  <p class="ft-copyright">{{ SITE_NAME }} 蜀ICP备xxxxxxx号-1</p>
-  <div class="scroll" id="scroll" style="display:none;">TOP</div>
-      <script type="text/javascript">
-        $(function(){
-            showScroll();
-            function showScroll(){
-                $(window).scroll( function() {
-                    var scrollValue=$(window).scrollTop();
-                    scrollValue > 100 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
-                } );
-                $('#scroll').click(function(){
-                    $("html,body").animate({scrollTop:0},200);
-                });
-            }
-        })
-	</script>
-      <div id="musicPlayer"><img src="{% static 'images/bgmusic.png' %}"></div>
-      <script type="text/javascript" src="{% static 'js/jquery.simplemusic.js' %}" ></script>
-      <script type="text/javascript">
-        $(function () {
-            $("#musicPlayer").simplemusic({
-                autoplay: false,
-                urls: ["http://qzone.haoduoge.com/music3/2015-02-02/1422858039.mp3","http://qzone.haoduoge.com/music3/2015-02-02/1422858039.mp3"]
-            });
-        });
-      </script>
-  </div>
-</footer>
-</body>
+				<div class="moreSelect" id="lp_right_select">
+					<div class="ms-top">
+						<ul class="hd" id="tab">
+						  <li class="cur"><a href="/">浏览排行</a></li>
+						  <li><a href="/">评论排行</a></li>
+						</ul>
+					</div>
+					<div class="ms-main" id="ms-main">
+						<div style="display: block;" class="bd bd-news" >
+						    <ul>
+								{% for click_count in click_count_list %}
+							    <li><a href="{% url 'article' %}?id={{ click_count.id }}" target="_blank">{{ click_count.title }}</a></li>
+							    {% endfor %}
+						    </ul>
+						</div>
+						<div  class="bd bd-news">
+						    <ul>
+							    {% for article in article_comment_list %}
+							    <li><a href="{% url 'article' %}?id={{ article.id }}" target="_blank">{{ article.title}}</a></li>
+							    {% endfor %}
+						    </ul>
+						</div>
+					  </div>
+				</div>
+				<!--切换卡结束 -->
+				<div class="cloud">
+					<h3>标签云</h3>
+					<ul>
+						{% for tag in tag_list %}
+						<li><a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="tuwen">
+					<h3>文章归档</h3>
+					<ul>
+						{% for archive in archive_list %}
+						<li>
+							<p><span class="tutime font-size-18"><a href='{% url 'archive' %}?year={{ archive | slice:"4" }}&month={{ archive | slice:"5:7" }}'>{{ archive }}</a></span></p>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="links">
+					<h3>友情链接</h3>
+					<ul>
+						{% for links in links_list %}
+						<li><a href="{{ links.callback_url }}">{{ links.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer class="bs-docs-footer" role="contentinfo">
+
+		<div class="scroll" id="scroll" style="display:none;">TOP</div>
+		<div id="musicPlayer"><img src="{% static 'images/bgmusic.png' %}"></div>
+		<div style="text-align:center">{{ SITE_NAME }} 蜀ICP备xxxxxxx号-1</div>
+	</footer>
+  </body>
 </html>
+

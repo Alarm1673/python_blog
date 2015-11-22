@@ -5233,3 +5233,264 @@ NameError: global name 'Category' is not defined
 2015-09-15 15:35:49,062 [Thread-387:7640] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-09-15 17:32:20,641 [Thread-128:8032] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-09-15 17:32:20,651 [Thread-129:7556] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 15:25:24,092 [Thread-23:7428] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 15:25:24,115 [Thread-24:7432] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 16:32:12,385 [Thread-829:7716] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 16:32:12,404 [Thread-830:7952] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 17:39:04,664 [Thread-617:5844] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 17:39:04,683 [Thread-618:5444] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 17:47:15,882 [Thread-624:6280] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-23 17:47:15,894 [Thread-625:7244] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 09:09:50,595 [Thread-6:2888] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 09:09:50,608 [Thread-7:1192] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 09:13:29,180 [Thread-4:5248] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 09:13:29,193 [Thread-5:1912] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:33:11,615 [Thread-6:7160] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:33:11,622 [Thread-7:2892] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:36:12,194 [Thread-6:6568] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery.min.js
+2015-09-24 11:36:12,194 [Thread-4:6008] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/blog.css
+2015-09-24 11:36:12,194 [Thread-3:7088] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/bootstrap.min.css
+2015-09-24 11:36:12,194 [Thread-5:5800] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/bootstrap.min.js
+2015-09-24 11:49:57,509 [Thread-21:4292] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:49:57,523 [Thread-22:520] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:53:53,358 [Thread-3:6592] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:53:53,364 [Thread-6:4580] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-24 11:55:19,168 [Thread-18:6360] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 54, in index1
+    return render(request, 'index1.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2015-09-24 11:57:47,960 [Thread-36:4136] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:57:49,789 [Thread-38:6808] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:57:50,990 [Thread-39:5836] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:58:46,947 [Thread-2:6104] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 54, in index1
+    return render(request, 'index1.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'index1' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2015-09-24 11:59:25,117 [Thread-4:5504] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:59:26,428 [Thread-6:6160] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:59:27,644 [Thread-8:4976] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 11:59:28,359 [Thread-10:5680] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/modernizr.js
+2015-09-24 12:00:22,388 [Thread-2:6244] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 50, in index
+    return render(request, 'index.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 433, in _reverse_with_prefix
+    self._populate()
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 308, in _populate
+    for name in pattern.reverse_dict:
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 338, in reverse_dict
+    self._populate()
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 326, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 247, in callback
+    self._callback = get_callable(self._callback_str)
+  File "D:\Python27\lib\site-packages\django\utils\lru_cache.py", line 101, in wrapper
+    result = user_function(*args, **kwds)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 106, in get_callable
+    mod = import_module(mod_name)
+  File "D:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named index1
+2015-09-24 12:01:07,392 [Thread-2:5504] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 54, in index1
+    return render(request, 'index1.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2015-09-25 13:02:40,726 [Thread-2:7984] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 54, in index1
+    return render(request, 'index1.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\Python27\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2015-09-25 13:02:41,072 [Thread-3:7568] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-09-25 13:02:41,082 [Thread-4:7548] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-21 16:13:09,026 [Thread-24:7500] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-21 16:19:55,374 [Thread-26:3864] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/bootstrap.min.css
+2015-11-21 16:19:55,374 [Thread-27:7324] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery-1.9.0.min.js
+2015-11-21 16:19:55,375 [Thread-29:5088] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery.simplemusic.js
+2015-11-21 16:19:55,375 [Thread-28:6504] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/bgmusic.png
+2015-11-21 16:19:55,421 [Thread-30:6724] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:19:55,427 [Thread-31:7912] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:19:55,433 [Thread-32:4468] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:19:55,438 [Thread-33:6044] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:19:55,444 [Thread-34:6936] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:33:39,256 [Thread-72:8188] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:33:39,276 [Thread-73:7620] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:33:39,283 [Thread-74:5224] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:33:39,285 [Thread-75:7296] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:33:39,286 [Thread-76:3328] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:33:52,940 [Thread-89:3068] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:33:52,940 [Thread-90:7824] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:33:52,941 [Thread-91:2916] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:33:52,943 [Thread-92:6020] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:33:52,944 [Thread-93:4248] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:33:53,237 [Thread-106:1712] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:33:53,237 [Thread-107:8140] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:33:53,239 [Thread-108:5820] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:33:53,240 [Thread-109:3556] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:33:53,242 [Thread-110:3592] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:34:35,033 [Thread-124:896] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:34:35,036 [Thread-125:6540] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:34:35,038 [Thread-126:1832] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:34:35,039 [Thread-127:2620] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:34:35,039 [Thread-128:2844] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:36:18,335 [Thread-137:1996] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:36:18,335 [Thread-138:3348] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:36:18,336 [Thread-139:2660] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:36:18,338 [Thread-140:6924] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:36:18,361 [Thread-141:8028] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:36:20,634 [Thread-150:8188] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:36:20,651 [Thread-151:7620] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:36:20,654 [Thread-152:5224] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:36:20,654 [Thread-153:7296] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:36:20,654 [Thread-154:3328] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:36:51,888 [Thread-157:184] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery-1.9.0.min.js
+2015-11-21 16:36:51,888 [Thread-158:4372] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/bgmusic.png
+2015-11-21 16:36:51,888 [Thread-159:7748] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery.simplemusic.js
+2015-11-21 16:36:51,888 [Thread-156:4476] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/bootstrap.min.css
+2015-11-21 16:36:51,936 [Thread-160:1680] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/bgmusic.png
+2015-11-21 16:36:51,947 [Thread-161:4924] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:36:51,947 [Thread-162:2028] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:36:51,950 [Thread-163:6832] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:36:51,951 [Thread-164:7912] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:36:51,954 [Thread-165:6964] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:37:00,260 [Thread-167:5872] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/bootstrap.min.css
+2015-11-21 16:37:00,266 [Thread-168:7876] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery-1.9.0.min.js
+2015-11-21 16:37:00,266 [Thread-170:5600] [django.request:170] [base:get_response] [WARNING]- Not Found: /js/jquery.simplemusic.js
+2015-11-21 16:37:00,266 [Thread-169:4672] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/bgmusic.png
+2015-11-21 16:37:00,305 [Thread-171:5124] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_05_1.jpg
+2015-11-21 16:37:00,309 [Thread-172:6568] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_06_1.jpg
+2015-11-21 16:37:00,309 [Thread-173:932] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_04_1.jpg
+2015-11-21 16:37:00,309 [Thread-174:4236] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/ico_07_1.jpg
+2015-11-21 16:37:00,312 [Thread-175:6308] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/bgmusic.png
+2015-11-21 16:37:00,312 [Thread-176:5408] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/datepng.png
+2015-11-21 16:37:03,813 [Thread-177:6248] [django.request:170] [base:get_response] [WARNING]- Not Found: /css/bootstrap.min.css
+2015-11-21 19:38:10,851 [Thread-1161:6964] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/intro-bg.jpg
+2015-11-21 19:38:11,266 [Thread-1170:5196] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/intro-bg.jpg
+2015-11-22 13:07:11,448 [Thread-11:2180] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-22 13:07:11,456 [Thread-12:6228] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico

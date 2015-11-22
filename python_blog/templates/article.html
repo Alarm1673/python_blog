@@ -11,16 +11,17 @@
         <div class="postmeta">
           <span class="postmeta_author">{{ article.user.username }}</span>
           <span class="postmeta_time">{{ article.date_publish | date:'Y-m-d' }}</span>
+          <span class="tags">
+            {% for tag in article.tag.all %}
+            <a href="{% url 'tag' %}?id={{ tag.id }}" rel="tag">{{ tag.name }}</a>
+            {% endfor %}
+        </span>
         </div>
     </div>
         <div class="entry">
           {{ article.content | safe }}
         </div>
-        <span class="tags">
-            {% for tag in article.tag.all %}
-            <a href="{% url 'tag' %}?id={{ tag.id }}" rel="tag">{{ tag.name }}</a>
-            {% endfor %}
-        </span>
+
 
 
       <ol class="commentlist">
