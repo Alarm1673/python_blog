@@ -5494,3 +5494,71 @@ NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{
 2015-11-21 19:38:11,266 [Thread-1170:5196] [django.request:170] [base:get_response] [WARNING]- Not Found: /images/intro-bg.jpg
 2015-11-22 13:07:11,448 [Thread-11:2180] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
 2015-11-22 13:07:11,456 [Thread-12:6228] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-24 12:31:52,049 [Thread-5:8024] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-24 12:31:52,082 [Thread-6:7668] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-26 12:44:51,256 [Thread-5:6564] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-26 12:44:51,283 [Thread-6:8844] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2015-11-26 12:49:27,720 [Thread-16:6168] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /archive/
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 65, in archive
+    return render(request, 'archive.html', locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 395, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'endblock'
+2015-11-26 12:54:39,683 [Thread-96:4496] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /tag
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_blog\python_blog\blog\views.py", line 217, in tag
+    return render(request,'tag.html',locals())
+  File "D:\Python27\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Python27\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\Python27\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\Python27\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 345, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "D:\Python27\lib\site-packages\django\template\debug.py", line 60, in extend_nodelist
+    super(DebugParser, self).extend_nodelist(nodelist, node, token)
+  File "D:\Python27\lib\site-packages\django\template\base.py", line 371, in extend_nodelist
+    "in the template." % node)
+TemplateSyntaxError: <ExtendsNode: extends 'base.html'> must be the first tag in the template.

@@ -1,25 +1,133 @@
-{% extends 'base.html' %}
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+<title>{{ SITE_NAME }}</title>
+<meta name="keywords" content="{{ SITE_NAME }}" />
+<meta name="description" content="{{ SITE_DESC }}" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+{% block custom_css %}{% endblock %}
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src='{% static 'js/bootstrap.min.js' %}'></script>
+<script type="text/javascript" src="{% static 'js/sliders.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-1.9.0.min.js' %}" ></script>
+<script type="text/javascript" src="{% static 'js/jquery.simplemusic.js' %}" ></script>
+<!--[if lt IE 9]>
+<![endif]-->
+{% block custom_js %}{% endblock %}
 </head>
-{% load staticfiles %}
-{% block left_content %}
+<body>
 
-    <div class="topnews">
-      <h2>{{ tag.name }}</h2>
-        {% for article in article_tag_list%}
-      <div class="blogs">
-        <ul>
-          <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
-          <p>{{ article.desc }}</p>
-          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a>{% endfor %}</span><span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r"><a href="/">浏览（{{ article.click_count }}）</a></span><span class="pingl f_r"><a href="/">评论（{{ article.comment_set.all.count }}）</a></span></p>
-        </ul>
-      </div>
-        {% endfor %}
-    </div>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="container-fluid">
+				 <div class="navbar-header" id="topnav">
+					<a class="navbar-brand" href="{% url 'index' %}">首页</a>
+					<a class="navbar-brand" href="{% url 'direct' %}">博客</a>
+					<a class="navbar-brand" href="{% url 'about' %}">关于</a>
+					<script src="{% static 'js/nav.js' %}"></script>
+				 </div>
+			</div>
+		</div>
+	</nav>
 
-{% endblock %}
-</body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8" role="main">
+                <!-- <div class="blogs"> -->
+				  <div class="topnews">
+                      <h2>{{ tag.name }}</h2>
+                        {% for article in article_tag_list%}
+                      <div class="blogs">
+                        <ul>
+                          <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
+                          <p>{{ article.desc }}</p>
+                          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a>{% endfor %}</span><span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r"><a href="/">浏览（{{ article.click_count }}）</a></span><span class="pingl f_r"><a href="/">评论（{{ article.comment_set.all.count }}）</a></span></p>
+                        </ul>
+                      </div>
+                    {% endfor %}
+                </div>
+                 <!--</div> -->
+                 {% include 'pagination.html' %}
+			</div>
+
+			<div class="col-md-4" role="complementary">
+				<div class="tit01">
+					<h3>关注我</h3>
+					<div class="gzwm">
+						<ul>
+						  <li><a class="xlwb" href="{{ WEIBO_SINA }}" target="_blank">新浪微博</a></li>
+						  <li><a class="txwb" href="{{ WEIBO_TENCENT }}" target="_blank">腾讯微博</a></li>
+						  <li><a class="rss" href="{{ PRO_RSS }}" target="_blank">RSS</a></li>
+						  <li><a class="wx" href="{{ PRO_EMAIL }}">邮箱</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- tit01结束 -->
+
+				<div class="moreSelect" id="lp_right_select">
+					<div class="ms-top">
+						<ul class="hd" id="tab">
+						  <li class="cur"><a href="/">浏览排行</a></li>
+						  <li><a href="/">评论排行</a></li>
+						</ul>
+					</div>
+					<div class="ms-main" id="ms-main">
+						<div style="display: block;" class="bd bd-news" >
+						    <ul>
+								{% for click_count in click_count_list %}
+							    <li><a href="{% url 'article' %}?id={{ click_count.id }}" target="_blank">{{ click_count.title }}</a></li>
+							    {% endfor %}
+						    </ul>
+						</div>
+						<div  class="bd bd-news">
+						    <ul>
+							    {% for article in article_comment_list %}
+							    <li><a href="{% url 'article' %}?id={{ article.id }}" target="_blank">{{ article.title}}</a></li>
+							    {% endfor %}
+						    </ul>
+						</div>
+					  </div>
+				</div>
+				<!--切换卡结束 -->
+				<div class="cloud">
+					<h3>标签云</h3>
+					<ul>
+						{% for tag in tag_list %}
+						<li><a href="{% url 'tag' %}?id={{ tag.id }}">{{ tag.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="tuwen">
+					<h3>文章归档</h3>
+					<ul>
+						{% for archive in archive_list %}
+						<li>
+							<p><span class="tutime font-size-18"><a href='{% url 'archive' %}?year={{ archive | slice:"4" }}&month={{ archive | slice:"5:7" }}'>{{ archive }}</a></span></p>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="links">
+					<h3>友情链接</h3>
+					<ul>
+						{% for links in links_list %}
+						<li><a href="{{ links.callback_url }}">{{ links.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="bs-docs-footer" role="contentinfo">
+
+		<div class="scroll" id="scroll" style="display:none;">TOP</div>
+		<div id="musicPlayer"><img src="{% static 'images/bgmusic.png' %}"></div>
+		<div style="text-align:center">{{ SITE_NAME }} 蜀ICP备xxxxxxx号-1</div>
+	</footer>
+  </body>
 </html>
