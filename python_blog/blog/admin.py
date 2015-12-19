@@ -26,10 +26,13 @@ class ArticleAdmin(admin.ModelAdmin):
             '/static/js/kindeditor-4.1.10/config.js',
         )
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('username', 'article', 'content')
+
 
 admin.site.register(User)
 admin.site.register(Tag)
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment,CommentAdmin)
 admin.site.register(Links)
 

@@ -10,15 +10,34 @@
         <p style="font-size:15px">&nbsp;&nbsp;&nbsp;&nbsp;Call Me：819748566(QQ)</p>
     </div>
     </br>
-    <div>
-        <div>留言</div>
-        <div>
 
-            </br>
-            <input name="submit" type="submit" id="submit" tabindex="5" value="提交留言" class="button" />
-            <script type="text/javascript" src="{% static 'js/kindeditor-4.1.10/kindeditor.js' %}"></script>
-
-        </div>
-    </div>
-
+{#    <div id="commentform">#}
+{#    <h3 id="respond">留言</h3>#}
+{##}
+{#    <form action="{% url 'comment_post' %}" method="post">#}
+{#    {% csrf_token %}#}
+{#    <p><label for="author">昵称:</label>{{ comment_form.author }}<label style="color:red">*</label>#}
+{#        <input class="comment_input" id="author" maxlength="50" name="author" required="required" size="25" tabindex="1" value="" type="text">#}
+{#    </p>#}
+{##}
+{#    <p><label for="email">邮箱:</label>{{ comment_form.email }}<label style="color:red">*</label>#}
+{#        <input class="comment_input" id="email" maxlength="50" name="email" required="required" size="25" tabindex="2" value="" type="email">#}
+{#    </p>#}
+{##}
+{#    <p><label for="url">地址:</label>{{ comment_form.url }}&nbsp;&nbsp;&nbsp;#}
+{#        <input class="comment_input" id="url" maxlength="100" name="url" size="25" tabindex="3" type="url">#}
+{#    </p>#}
+{##}
+{##}
+{#        <p>{{ comment_form.comment }}#}
+{#            <textarea class="message_input" cols="25" id="comment" name="comment" required="required" rows="5" tabindex="4"></textarea>#}
+{#        </p>#}
+{##}
+{#    <p>#}
+{#        {{ comment_form.article }}#}
+{#        <input name="submit" type="submit" id="submit" tabindex="5" value="提交留言" class="button" />#}
+{#    </p>#}
+{##}
+{#    </form>#}
+{#    </div>#}
 {% endblock %}
